@@ -1,7 +1,8 @@
 (include_subdirs unqualified)
 
 (library
-  (public_name notty)
+  (name notty)
+  (public_name notty-community)
   (synopsis "Declaring terminals")
   (libraries uutf)
   (wrapped false)
@@ -9,7 +10,7 @@
   (private_modules notty_grapheme_cluster notty_uucp notty_uucp_data))
 
 (library
-  (public_name notty.top)
+  (public_name notty-community.top)
   (synopsis "Notty toplevel support")
   (name notty_top)
   (wrapped false)

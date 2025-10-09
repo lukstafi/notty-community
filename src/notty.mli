@@ -728,7 +728,7 @@ I.(wow <-> (void 2 0 <|> wow)) |> Notty_unix.output_image
 
     {1:examples Examples}
 
-    We assume a toplevel with [Notty] support ([#require "notty.top"]).
+    We assume a toplevel with [Notty] support ([#require "notty-community.top"]).
 
     {2 Hello}
 
@@ -817,7 +817,7 @@ colors |> List.mapi I.(fun i c -> rad i c |> pad ~t:i ~l:(2 * i))
     expressions, displayed by the pretty-printer that is installed by the
     toplevel support. Self-contained programs need a separate IO module:
 
-    {[#require "notty.unix"]}
+    {[#require "notty-community.unix"]}
 
     {[sierp 8 |> Notty_unix.output_image]}
 

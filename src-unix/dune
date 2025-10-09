@@ -1,5 +1,5 @@
 (library
-  (public_name notty.unix)
+  (public_name notty-community.unix)
   (synopsis "Notty Unix IO")
   (name notty_unix)
   (wrapped false)
@@ -10,6 +10,6 @@
       :standard
       (-Wall -Wextra -O3)))
   (optional)
-  (libraries notty unix))
+  (libraries notty-community unix))
 
 (include_subdirs unqualified)
