@@ -1,7 +1,11 @@
-## unreleased
+## v0.2.4 (2025-10-09)
 
+* Rename the library from `notty` to `notty-community`. The module names are unchanged (Kate Deplaix)
+* Add support for OCaml 5.4 (Florian Angeletti)
 * Moved to Dune 3.0. (Antonin Décimo)
-* Update to Unicode 16. (Antonin Décimo)
+* Update to Unicode 17. (Antonin Décimo, Kate Deplaix)
+* Introduce the `bench` dune profile to build the benchmark (Kate Deplaix)
+* Introduce the `regenerate` dune profile to update the `Notty_uucp_data` module (Kate Deplaix)
 
 ## v0.2.3 (2022-09-02)
 
