@@ -22,6 +22,7 @@ depends: [
   "cppo" {build & >= "1.1.0"}
   "uutf" {>= "1.0.0"}
   "uucp" {with-dev-setup}
+  "lwt" {with-test}
   "odoc" {with-doc}
 ]
 depopts: ["lwt"]
