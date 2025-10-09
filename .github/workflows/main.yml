@@ -34,9 +34,9 @@ jobs:
 
       - run: opam install . --deps-only --with-test
 
-      - run: opam exec -- dune build -p notty-community
+      - run: opam exec -- dune build
 
-      - run: opam exec -- dune runtest -p notty-community
+      - run: opam exec -- dune runtest
 
   lint-doc:
     runs-on: ubuntu-latest
