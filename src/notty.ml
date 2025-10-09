@@ -383,7 +383,10 @@ module I = struct
 
     let create () =
       let img, line, attr = ref empty, ref empty, ref [] in
+      (* get the out_width field from the default out_functions *)
+      let default = pp_get_formatter_out_functions std_formatter () in
       let fmt = formatter_of_out_functions {
+          default with
           out_flush = (fun () ->
             img := !img <-> !line; line := empty; attr := [])
         ; out_newline = (fun () ->
@@ -393,7 +396,7 @@ module I = struct
         (* Not entirely clear; either or both could be void: *)
         ; out_spaces = (fun w -> line := !line <|> char (top_a attr) ' ' w 1)
         ; out_indent = (fun w -> line := !line <|> char (top_a attr) ' ' w 1)
-      } in
+      }[@warning "-23"] in
       pp_set_formatter_stag_functions fmt {
         (pp_get_formatter_stag_functions fmt ()) with
             mark_open_stag =
